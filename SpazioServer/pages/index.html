@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <script>
+
+
+        var users =[{ Email:'Eyal@gmail.com', Password:'123abc', userName:'EYAL PELEG', phoneNumber:'321321', photo:'img1'},{ Email:'adas@gmail.com', Password:'dasbc', userName:'EYAL PEwLEG', phoneNumber:'32132f321', photo:'img2'}]
+
+        $(document).ready(function () {
+          ajaxCall("GET", "../api/User", "", getMyUsersSS, getMyUsersERR)
+          ajaxCall("GET", "../api/space", "", getMyUsersSS, getMyUsersERR)
+                  ajaxCall("GET", "../api/Equipment", "", getMyUsersSS, getMyUsersERR)
+
+                  ajaxCall("GET", "../api/Facilities", "", getMyUsersSS, getMyUsersERR)
+
+                          ajaxCall("GET", "../api/Availability", "", getMyUsersSS, getMyUsersERR)
+
+
+                  ajaxCall("GET", "../api/FieldEq", "", getMyUsersSS, getMyUsersERR)
+        })
+
+      // for (i = 0; i < users.length; i++) {
+      //      ajaxCall("POST", "../api/User", JSON.stringify(users[i]), postMyUsersSS, postMyUsersERR)
+      //  }
+
+        function getMyUsersSS(data) {
+            console.log(data);
+        }
+
+        function getMyUsersERR(err) {
+            console.log(err)
+        }
+        function postMyUsersSS(data) {
+            console.log(data);
+        }
+
+        function postMyUsersERR(err) {
+            console.log(err)
+        }
+         function DeleteMyLikedUsersSS(data) {
+            console.log(data);
+        }
+        function DeleteMyLikedUsersERR(err) {
+            console.log(err)
+        }
+
+
+        
+
+
+
+
+
+    </script>
+    <title></title>
+</head>
+<body>
+    
+</body>
+</html>
